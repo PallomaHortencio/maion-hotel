@@ -1,0 +1,432 @@
+<!DOCTYPE html <html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maion Hotel Boutique &#8211; Acomodações</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" integrity="sha512-xA6Hp6oezhjd6LiLZynuukm80f8BoZ3OpcEYaqKoCV3HKQDrYjDE1Gu8ocxgxoXmwmSzM4iqPvCsOkQNiu41GA==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <link rel="stylesheet" href="./assets/css/webflow.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <style>
+    .anti-flicker-hide {
+      opacity: 0 !important;
+    }
+
+    .suites {
+      font-size: 22px;
+    }
+
+    @media screen and (max-width: 1152px) {
+      .suites {
+        font-size: 17px;
+      }
+    }
+
+    .image-container {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .image-container img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .first-image {
+      width: 100%;
+      height: auto;
+    }
+
+    @media screen and (max-width: 954px) {
+      .first-image {
+        height: 95vh !important;
+        object-fit: cover;
+      }
+    }
+
+    @media screen and (min-width: 1366px) {
+      .height-250px-xl {
+        min-height: 250px;
+        height: 280px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <div class="maion-nav">
+      <div class="maion-burger">
+        <div class="maion-burger__lign top-lign"></div>
+        <div class="maion-burger__lign middle-lign"></div>
+        <div class="maion-burger__lign bottom-lign"></div>
+      </div>
+      <div class="is-absolute-mobile pos_relative z-index_2 maion-logo-container">
+        <a href="/" class="link-logo w-inline-block w--current">
+          <img id="maion-logo-yellow" src="./assets/images/logotipo_yellow.png" class="maion-logo-140 is-width-120px-mobile is-margin-auto" />
+        </a>
+      </div>
+      <a href="https://reservas.desbravador.com.br/hotel-app/maion-hotel-e-boutique" class="maion-btn menu-btn w-button" target="_blank">RESERVE AGORA</a>
+    </div>
+    <nav id="maion-menu" class="maion-menu overflow_scroll bg-black">
+      <div class="flex-horizontal_space-between align_center">
+        <img src="./assets/images/logotipo_white.png" alt="maion-logo" class="maion-logo-125 display_phablet-up" />
+        <div class="maion-menu-close display-phablet-up"></div>
+      </div>
+      <div class="maion-visible-menu">
+        <div>
+          <a href="/" aria-current="page" class="menu-nav_link is-mb-2em w-inline-block w--current">
+            <div class="text-link">Home</div>
+          </a>
+          <div class="menu-bloc">
+            <div class="menu-dropdown z-index-2">
+              <a href="./praia-espelho.html" class="menu-nav_link w-inline-block">
+                <div class="text-link">PRAIA DO ESPELHO</div>
+              </a>
+            </div>
+          </div>
+          <div class="menu-bloc">
+            <div class="menu-dropdown z-index-2">
+              <div class="dropdown-text uppercase color-white">
+                <a href="./acomodacoes.html" class="menu-nav_link w-inline-block">
+                  ACOMODAÇÕES
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="menu-bloc">
+            <div class="menu-dropdown z-index-2">
+              <a href="./gastronomia.html" class="menu-nav_link w-inline-block">
+                <div class="text-link">GASTRONOMIA</div>
+              </a>
+            </div>
+          </div>
+          <div class="m-top_2em">
+            <a href="./conceito.html" class="menu-nav_link is-mb-1em z-index-2 w-inline-block">
+              <div class="text-link">CONCEITO</div>
+            </a><a href="./contato.html" class="menu-nav_link is-mb-1em z-index-2 w-inline-block">
+              <div class="text-link">CONTATO</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+  </div>
+  <div class="main">
+    <div class="">
+      <div class="image-container">
+        <img src="./assets/images/banheira.jpeg" class="first-image" />
+      </div>
+    </div>
+    <div class="image-container">
+      <img src="./assets/images/acomodacoes.jpg" />
+    </div>
+
+    <div class="container-unit parallax-imgs-1">
+      <div class="col-33 col-40_tablet flex-vertical_left">
+        <div class="section_info align-left transform-text-left max-width_350">
+          <div class="section_category_lign"></div>
+          <a class="section_category m-bottom_3em w-inline-block">
+            <div class="suites">SUÍTE <strong>AREIA</strong> </div>
+          </a>
+          <p class="section_paragraph text-align_left-tablet">
+            Possui localização privilegiada, vista para o mar e fica a 40 metros da praia.
+            <br>
+            Varanda privativa e natureza exuberante.
+            <br>
+            Acomodações para até 3 pessoas.
+          </p>
+        </div>
+      </div>
+      <div class="col-66 col-55-tablet m-top_3em-mobile">
+        <div class="section_img-container height_100">
+          <div id="areia" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#areia" data-slide-to="0" class="active"></li>
+              <li data-target="#areia" data-slide-to="1"></li>
+              <li data-target="#areia" data-slide-to="2"></li>
+              <li data-target="#areia" data-slide-to="3"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./assets/images/areia1.jpg" class="d-block w-100" alt="areia1.jpg">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/images/areia2.jpg" class="d-block w-100" alt="areia2.jpg">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/images/areia3.jpg" class="d-block w-100" alt="areia3.jpg">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/images/areia4.jpg" class="d-block w-100" alt="areia4.jpg">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-target="#areia" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-target="#areia" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-unit wrap-reverse">
+      <div class="col-66 col-55-tablet m-top_3em-mobile">
+        <div class="section_img-container height_100 reveal-top">
+          <div id="coral" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#coral" data-slide-to="0" class="active"></li>
+              <li data-target="#coral" data-slide-to="1"></li>
+              <li data-target="#coral" data-slide-to="2"></li>
+              <li data-target="#coral" data-slide-to="3"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./assets/images/coral1.jpg" class="d-block w-100" alt="coral1.jpg">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/images/coral2.jpg" class="d-block w-100" alt="coral2.jpg">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/images/coral3.jpg" class="d-block w-100" alt="coral3.jpg">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/images/coral4.jpg" class="d-block w-100" alt="coral4.jpg">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-target="#coral" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-target="#coral" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-33 col-40_tablet flex-vertical_left">
+        <div class="section_info align-right transform-text-left max-width_350">
+          <div class="section_category_lign"></div>
+          <a class="section_category m-bottom_3em w-inline-block">
+            <div class="suites">SUÍTE <strong>CORAL</strong></div>
+          </a>
+          <p class="section_paragraph text-align_right-tablet">
+            Localizada na área térrea a 50 metros da praia.
+            <br>
+            Acomodações para até 4 pessoas. Ideal para família com crianças.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-unit parallax-imgs-1">
+    <div class="col-33 col-40_tablet flex-vertical_left">
+      <div class="section_info align-left transform-text-left max-width_350">
+        <div class="section_category_lign"></div>
+        <a class="section_category m-bottom_3em w-inline-block">
+          <div class="suites">SUÍTE <strong>FALÉSIA</strong></div>
+        </a>
+        <p class="section_paragraph text-align_left-tablet">
+          Suíte localizada na Falésia com acesso via escadas. Jardim exuberante, muito silêncio e natureza ao redor.
+          <br>
+          Acomodações para até 4 pessoas.
+        </p>
+      </div>
+    </div>
+    <div class="col-66 col-55-tablet m-top_3em-mobile">
+      <div class="section_img-container height_100pct">
+        <div id="falesia" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#falesia" data-slide-to="0" class="active"></li>
+            <li data-target="#falesia" data-slide-to="1"></li>
+            <li data-target="#falesia" data-slide-to="2"></li>
+            <li data-target="#falesia" data-slide-to="3"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./assets/images/falesia1.jpg" class="d-block w-100" alt="falesia1.jpg">
+            </div>
+            <div class="carousel-item">
+              <img src="./assets/images/falesia2.jpg" class="d-block w-100" alt="falesia1.jpg">
+            </div>
+            <div class="carousel-item">
+              <img src="./assets/images/falesia3.jpg" class="d-block w-100" alt="falesia1.jpg">
+            </div>
+            <div class="carousel-item">
+              <img src="./assets/images/falesia4.jpg" class="d-block w-100" alt="falesia1.jpg">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-target="#falesia" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-target="#falesia" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-unit wrap-reverse">
+    <div class="col-66 col-55-tablet m-top_3em-mobile">
+      <div class="section_img-container height_100 reveal-top">
+        <div id="falesiaSup" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#falesiaSup" data-slide-to="0" class="active"></li>
+            <li data-target="#falesiaSup" data-slide-to="1"></li>
+            <li data-target="#falesiaSup" data-slide-to="2"></li>
+            <li data-target="#falesiaSup" data-slide-to="3"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./assets/images/falesia_super1.jpg" class="d-block w-100" alt="falesia_super1.jpg">
+            </div>
+            <div class="carousel-item">
+              <img src="./assets/images/falesia_super2.jpg" class="d-block w-100" alt="falesia_super2.jpg">
+            </div>
+            <div class="carousel-item">
+              <img src="./assets/images/falesia_super3.jpg" class="d-block w-100" alt="falesia_super3.jpg">
+            </div>
+            <div class="carousel-item">
+              <img src="./assets/images/falesia_super4.jpg" class="d-block w-100" alt="falesia_super4.jpg">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-target="#falesiaSup" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-target="#falesiaSup" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-33 col-40_tablet flex-vertical_right">
+      <div class="section_info align-right transform-text-right max-width_350">
+        <div class="section_category_lign"></div>
+
+        <a class="section_category m-bottom_3em  w-inline-block">
+          <div class="suites">SUÍTE FALÉSIA <strong>SUPER LUXO</strong></div>
+        </a>
+
+        <p class="section_paragraph text-align_right-tablet">
+          Suite localizada na Falésia com acesso via escadas. Acomodações para até 4 pessoas,
+          vista para o jardim e um lindo deck privativo com ôfuro.<br>
+          Ideal para momentos e comemorações inesquecíveis.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="separator"></div>
+  <div class="maion-footer">
+    <div class="footer bg-black">
+      <div class="links-footer">
+        <div class="width-40pct-desktop" style="margin-bottom: 25px;">
+          <div class="bloc-footer footer__description width_100pct"></div>
+          <div class="flex-horizontal_space-between m-top-2em">
+            <div class="bloc-footer bloc-about color-white">
+              <h4 class="footer__section-title color-grey">MAION</h4>
+              <ul role="list" class="unordered-list color-white w-list-unstyled">
+                <li>
+                  <a href="/" class="bloc-footer-link color-grey w-inline-block">
+                    <div class="footer__text">Home</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="./praia-espelho.html" class="bloc-footer-link color-grey w-inline-block">
+                    <div class="footer__text">Praia de Espelho</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="./acomodacoes.html" class="bloc-footer-link color-grey w-inline-block">
+                    <div class="footer__text mt-20">Acomodações</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="./gastronomia.html" class="bloc-footer-link color-grey w-inline-block">
+                    <div class="footer__text mt-20">Gastronomia</div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="bloc-footer double-bloc">
+              <div class="flex-horizontal_space-between flex-vertical_mobile">
+                <div class="width-50pct width-100pct-mobile-only">
+                  <div>
+                    <ul role="list" class="footer__brand-list w-list-unstyled">
+                      <li class="list-item">
+                        <a href="./conceito.html" class="bloc-footer-link color-grey w-inline-block">
+                          <div class="footer__text">Conceito</div>
+                        </a>
+                      </li>
+                      <li class="list-item">
+                        <a href="./contato.html" class="bloc-footer-link color-grey w-inline-block">
+                          <div class="footer__text">Contato</div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="width-40pct-desktop m-top-3em-tablet height_100 p-right-20px-desktop">
+          <div id="map" data-lat="-16.724532" data-lng="-39.122580" data-title="Maion Hotel Boutique" class="google-map" style="top: -50px;"></div>
+        </div>
+      </div>
+      <div class="maion-footer__copyight">
+        <div class="is-w-40pct is-w-100-mobile is-flex-horizontal">
+          <div class="maion-logo-100">
+            <img src="./assets/images/logotipo_white.png" sizes="100px" alt="" />
+          </div>
+        </div>
+        <div class="is-w-100-mobile is-flex-horizontal is-centered mt-20-mobile w-clearfix">
+          <div class="copyright color-grey">
+            © <span id="copyright-year">2020</span> MAION
+            <!-- <a href="#" class="copyright-link color-grey"
+                >Termos e Condições</a
+              >
+              |
+              <a href="#" class="copyright-link color-grey"
+                >Política de Privacidade</a
+              > -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+  <!-- MOMENT JS-->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+
+  <!-- LAZY LOAD PLUGIN : to defer images loading which are below scroll threshold-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/4.1.4/lazysizes-umd.min.js"></script>
+
+  <!-- google maps -->
+  <script src="./assets/js/jquery.lazy-load-google-maps.min.js?v=1.0.0"></script>
+  <script src="./assets/js/google-maps.js?v=2.0.0"></script>
+
+  <!-- navbar effects -->
+  <script src="./assets/js/navbar-script.js?v=1.0.1"></script>
+
+  <!-- effects transforms -->
+  <script src="./assets/js/script.js?v=1.0.9"></script>
+  <script src="./assets/js/booking.js"></script>
+  <script src="//script.crazyegg.com/pages/scripts/0082/3126.js" async="async"></script>
+</body>
+
+</html>

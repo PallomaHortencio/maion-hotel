@@ -1,0 +1,451 @@
+<!DOCTYPE html <html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maion Hotel Boutique &#8211; Praia do Espelho</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" integrity="sha512-xA6Hp6oezhjd6LiLZynuukm80f8BoZ3OpcEYaqKoCV3HKQDrYjDE1Gu8ocxgxoXmwmSzM4iqPvCsOkQNiu41GA==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./assets/css/webflow.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <style>
+    .anti-flicker-hide {
+      opacity: 0 !important;
+    }
+  </style>
+  <!-- PHONE DETECTION -->
+  <meta name="format-detection" content="telephone=no" />
+
+  <!-- DATE PICKER -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+  <style>
+    @media screen and (min-width: 1366px) {
+      .height-250px-xl {
+        min-height: 250px;
+        height: 280px;
+      }
+    }
+
+    @media screen and (max-width: 479px) {
+      .banner_praia {
+        height: auto;
+        min-height: 109vh;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <div class="maion-nav">
+      <div class="maion-burger">
+        <div class="maion-burger__lign top-lign"></div>
+        <div class="maion-burger__lign middle-lign"></div>
+        <div class="maion-burger__lign bottom-lign"></div>
+      </div>
+      <div class="is-absolute-mobile pos_relative z-index_2 maion-logo-container">
+        <a href="/" class="link-logo w-inline-block w--current">
+          <img id="maion-logo-yellow" src="./assets/images/logotipo_yellow.png" class="maion-logo-140 is-width-120px-mobile is-margin-auto" />
+        </a>
+      </div>
+      <a href="https://reservas.desbravador.com.br/hotel-app/maion-hotel-e-boutique" class="maion-btn menu-btn w-button" target="_blank">RESERVE AGORA</a>
+    </div>
+    <nav id="maion-menu" class="maion-menu overflow_scroll bg-black">
+      <div class="flex-horizontal_space-between align_center">
+        <img src="./assets/images/logotipo_white.png" alt="maion-logo" class="maion-logo-125 display_phablet-up" />
+        <div class="maion-menu-close display-phablet-up"></div>
+      </div>
+      <div class="maion-visible-menu">
+        <div>
+          <a href="/" aria-current="page" class="menu-nav_link is-mb-2em w-inline-block w--current">
+            <div class="text-link">Home</div>
+          </a>
+          <div class="menu-bloc">
+            <div class="menu-dropdown z-index-2">
+              <a href="./praia-espelho.html" class="menu-nav_link w-inline-block">
+                <div class="text-link">PRAIA DO ESPELHO</div>
+              </a>
+            </div>
+          </div>
+          <div class="menu-bloc">
+            <div class="menu-dropdown z-index-2">
+              <div class="dropdown-text uppercase color-white">
+                <a href="./acomodacoes.html" class="menu-nav_link w-inline-block">
+                  ACOMODAÇÕES
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="menu-bloc">
+            <div class="menu-dropdown z-index-2">
+              <a href="./gastronomia.html" class="menu-nav_link w-inline-block">
+                <div class="text-link">GASTRONOMIA</div>
+              </a>
+            </div>
+          </div>
+          <div class="m-top_2em">
+            <a href="./conceito.html" class="menu-nav_link is-mb-1em z-index-2 w-inline-block">
+              <div class="text-link">CONCEITO</div>
+            </a><a href="./contato.html" class="menu-nav_link is-mb-1em z-index-2 w-inline-block">
+              <div class="text-link">CONTATO</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+  </div>
+  <div class="main">
+    <div class="banner">
+      <div class="banner_info overlay-dark p-around_medium justify_space-around align-space-around-tablet-down">
+        <!-- <div class="banner-logo_container m-top_20vh">
+            <img
+              src="./assets/images/logotipo_white.png"
+              alt=""
+              class="banner-logo"
+            />
+          </div> -->
+        <div class="banner-tagline">
+          <div class="color-white height_100 m-left-none"></div>
+          <h1 class="banner_title inside-tagline text-align_right-mobile">
+            BEM VINDO <br />À PRAIA DO ESPELHO
+          </h1>
+        </div>
+      </div>
+      <img src="./assets/images/image_36.jpg" width="1920" alt="maion-tulum-1" sizes="100vw" class="banner_img obj-pos_top" />
+    </div>
+    <div class="banner-container">
+      <!-- <div class="display_mobile-only transform-text-left">
+        <div class="section_info">
+          <div class="section_category_lign"></div>
+          <h3 class="section_category">A MAIS BELA</h3>
+          <h2 class="banner_title color-white text-align_right-tablet-up">
+            <span class="section_title-emphasis-bold inline">Considerada</span>
+            <br />uma das mais
+            <span class="section_title-emphasis-normal inline">belas</span>
+            <br />
+            <span class="section_title-emphasis-normal-italic inline">praias</span>
+            <br />do
+            <span class="section_title-emphasis-normal inline">planeta</span><span class="section_title-emphasis-normal-italic inline"></span>
+          </h2>
+          <p class="banner_paragraph">
+            Há alguns anos, a Praia do Espelho entrou para a lista das melhores praias do Brasil segundo pesquisa
+            de um influente guia Espelho figura entre as top five mais belas há mais de duas décadas. E todos os
+            títulos não são pra menos, porque a combinação fascinante de areias claras e douradas, a agua cristalina,
+            as piscinas naturais, emolduradas por coqueiros, falésias de mais de 50 metros de altura e os recifes de
+            corais
+            em quase toda a sua extensão. Um prato cheio para quem não dispensa um cenário maravilhoso.
+          </p>
+        </div>
+      </div> -->
+
+      <div class="banner m-top_2em m-bottom_2em">
+        <div class="banner_info banner_praia align-right overlay-dark p-around_medium-tablet-down">
+          <div class="section_info align-right width-50pct-desktop transform-text-left">
+            <div class="section_category_lign white"></div>
+            <a href="#" class="section_category m-bottom_3em color-white w-inline-block">
+              <div>Natureza Intocada</div>
+            </a>
+            <h2 class="banner_title color-white text-align_right-tablet-up text-align_left-mobile">
+              <!-- <span class="section_title-emphasis-bold inline">Considerada</span> -->
+              <br />Entre as 10
+              <br>
+              <span class="section_title-emphasis-normal inline"> mais belas praias</span>
+              <!-- <br /> -->
+              <!-- <span class="section_title-emphasis-normal-italic inline"
+                              ></span
+                            > -->
+              <br /> do
+              <span class="section_title-emphasis-normal inline">Brasil</span><span class="section_title-emphasis-normal-italic inline"></span>
+            </h2>
+            <p class="banner_paragraph color-white text-align_right-tablet-up text-align_left-mobile">
+              Há mais de duas décadas, o conjunto de atrativos escala a Praia do espelho entre as 10
+              mais belas praias do Brasil.
+              Recifes de corais, águas calmas, piscinas naturais, falésias com mais de 50 metros de
+              altura e natureza intocada em toda sua extensão, compõe um espetáculo visual.
+            </p>
+          </div>
+        </div>
+        <img src="./assets/images/image_37.jpg" alt="maion-tulum-2" width="1950" class="banner_img mobile-landscape-up scale115 lazyload" />
+      </div>
+    </div>
+    <div class="container-unit">
+      <div class="col-25-desktop col-33-tablet">
+        <div class="section_info height_100 flex-column align-left justify-center transform-text-right">
+          <div class="section_category_lign"></div>
+          <a href="#" class="section_category m-bottom_3em w-inline-block">
+            <div>MOMENTOS</div>
+          </a>
+          <h2 class="text_resp section_title title-overflow">
+            O céu espelhado<br /> nas águas do mar
+          </h2>
+          <p class="section_paragraph">
+            Durante a maré baixa os reflexos do sol tocam as águas do mar e então temos o cartão postal
+            dos sonhos: espelhos na superfície das águas, em todo o seu esplendor.
+            O encanto do céu noturno cheio de estrelas é um deslumbre a parte.
+            Poder sentar-se na areia e contemplar as noites de lua cheia quando o mar ganha reflexos
+            prateados, é um dos prazeres da vida que não tem preço.
+          </p>
+          <span class="section_title title-overflow">Localização</span>
+          <ul>
+            <li>20Km de Trancoso</li>
+            <li>24Km de Caraíva</li>
+            <li>50Km de Arraial D'Ajuda</li>
+            <li>75Km de Porto Seguro</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-73-desktop col-65-tablet m-top_3em-mobile">
+        <div class="section_img-container reveal-left">
+          <div class="row">
+            <div class="coluna margem">
+              <img src="./assets/images/praia-do-espelho.jpg" alt="maion-sferik" style="width:100%" class="section_img lazyload">
+            </div>
+            <div class="coluna margem">
+              <img src="./assets/images/praia-do-espelho-2.jpg" alt="maion-sferik" style="width:100%" class="section_img lazyload">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="banner m-top_2em m-bottom_2em">
+      <div class="banner_info banner_praia align-left overlay-dark p-around_medium-tablet-down">
+        <div class="section_info align-left width-50pct-desktop transform-text-left">
+          <div class="section_category_lign white"></div>
+          <a href="#" class="section_category m-bottom_3em color-white w-inline-block">
+            <div>PERMITA-SE!</div>
+          </a>
+          <h2 class="banner_title color-white text-align_left-tablet-up text-align_left-mobile">
+            Seu momento de viver<br />
+            <span class="section_title-emphasis-normal inline"> uma experiência de conexão </span> <br>
+            com a natureza.
+
+          </h2>
+          <p class="banner_paragraph color-white text-align_left-tablet-up text-align_left-mobile">
+            Eleita em 2009 pelo Guia Quatro Rodas como a terceira praia mais bonita
+            do Brasil, a Praia do Espelho é exemplo de preservação.
+            Toda essa paisagem inspira sentimentos poéticos.
+            Contemplar essa natureza única, é uma terapia para serenar nossa mente e
+            regenerar a nossa alma.
+          </p>
+          <p class=" color-white">Hotel Boutique</p>
+          <p class="banner_title color-white">Privacidade e exclusividade</p>
+          <p class="section_paragraph color-white">Com apenas 13 acomodações, o <strong>Maion</strong> tem por missão
+            oferecer a
+            hospedagem perfeita: atendimento humanizado para os quartos e na areia,
+            ambientes intimistas e confortáveis, design sofisticado e decoração
+            assinada por artistas locais.</p>
+        </div>
+      </div>
+      <img src="./assets/images/image_39.jpg" alt="maion-kintoh" width="1950" class="banner_img mobile-landscape-up scale115 lazyload" />
+    </div>
+  </div>
+
+  <div class="separator"></div>
+  <div class="maion-footer">
+    <div class="footer bg-black">
+      <div class="links-footer">
+        <div class="width-40pct-desktop" style="margin-bottom: 25px;">
+          <div class="bloc-footer footer__description width_100pct"></div>
+          <div class="flex-horizontal_space-between m-top-2em">
+            <div class="bloc-footer bloc-about color-white">
+              <h4 class="footer__section-title color-grey">MAION</h4>
+              <ul role="list" class="unordered-list color-white w-list-unstyled">
+                <li>
+                  <a href="/" class="bloc-footer-link color-grey w-inline-block">
+                    <div class="footer__text">Home</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="./praia-espelho.html" class="bloc-footer-link color-grey w-inline-block">
+                    <div class="footer__text">Praia de Espelho</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="./acomodacoes.html" class="bloc-footer-link color-grey w-inline-block">
+                    <div class="footer__text mt-20">Acomodações</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="./gastronomia.html" class="bloc-footer-link color-grey w-inline-block">
+                    <div class="footer__text mt-20">Gastronomia</div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="bloc-footer double-bloc">
+              <div class="flex-horizontal_space-between flex-vertical_mobile">
+                <div class="width-50pct width-100pct-mobile-only">
+                  <div>
+                    <ul role="list" class="footer__brand-list w-list-unstyled">
+                      <li class="list-item">
+                        <a href="./conceito.html" class="bloc-footer-link color-grey w-inline-block">
+                          <div class="footer__text">Conceito</div>
+                        </a>
+                      </li>
+                      <li class="list-item">
+                        <a href="./contato.html" class="bloc-footer-link color-grey w-inline-block">
+                          <div class="footer__text">Contato</div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="width-40pct-desktop m-top-3em-tablet height_100 p-right-20px-desktop">
+          <div id="map" data-lat="-16.724532" data-lng="-39.122580" data-title="Maion Hotel Boutique" class="google-map" style="top: -50px;"></div>
+        </div>
+      </div>
+      <div class="maion-footer__copyight">
+        <div class="is-w-40pct is-w-100-mobile is-flex-horizontal">
+          <div class="maion-logo-100">
+            <img src="./assets/images/logotipo_white.png" sizes="100px" alt="" />
+          </div>
+        </div>
+        <div class="is-w-100-mobile is-flex-horizontal is-centered mt-20-mobile w-clearfix">
+          <div class="copyright color-grey">
+            © <span id="copyright-year">2020</span> MAION
+            <!-- <a href="#" class="copyright-link color-grey"
+                >Termos e Condições</a
+              >
+              |
+              <a href="#" class="copyright-link color-grey"
+                >Política de Privacidade</a
+              > -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('#celular').mask('+00 (00) 00000-0000');
+    });
+  </script>
+  <script type="text/javascript">
+    'use strict';
+
+    function loadedContent() {
+      if (typeof daterangepicker !== 'undefined') {
+        var inputDatePickerCheckIn = $('input[name="dataIn"]'),
+          inputDatePickerCheckOut = $('input[name="dataOut"]');
+
+        if (typeof inputDatePickerCheckIn !== 'undefined') {
+          inputDatePickerCheckIn.daterangepicker({
+            autoApply: true,
+            singleDatePicker: true,
+            startDate: moment().add(1, 'days'),
+            locale: {
+              format: 'DD/MM/YYYY',
+              separator: '/',
+              applyLabel: 'Aplicar',
+              cancelLabel: 'Cancelar',
+              daysOfWeek: [
+                'Dom',
+                'Seg',
+                'Ter',
+                'Qua',
+                'Qui',
+                'Sex',
+                'Sab'
+              ],
+              monthNames: [
+                'Jan',
+                'Fev',
+                'Mar',
+                'Abr',
+                'Mai',
+                'Jun',
+                'Jul',
+                'Ago',
+                'Set',
+                'Out',
+                'Nov',
+                'Dez'
+              ],
+              firstDay: 1
+            }
+          });
+        }
+
+        if (typeof inputDatePickerCheckOut !== 'undefined') {
+          inputDatePickerCheckOut.daterangepicker({
+            autoApply: true,
+            singleDatePicker: true,
+            startDate: moment().add(2, 'days'),
+            locale: {
+              format: 'DD/MM/YYYY',
+              separator: '/',
+              applyLabel: 'Aplicar',
+              cancelLabel: 'Cancelar',
+              daysOfWeek: [
+                'Dom',
+                'Seg',
+                'Ter',
+                'Qua',
+                'Qui',
+                'Sex',
+                'Sab'
+              ],
+              monthNames: [
+                'Jan',
+                'Fev',
+                'Mar',
+                'Abr',
+                'Mai',
+                'Jun',
+                'Jul',
+                'Ago',
+                'Set',
+                'Out',
+                'Nov',
+                'Dez'
+              ],
+              firstDay: 1
+            }
+          });
+        }
+      }
+    }
+
+    // default value input Number booking engine
+    if (document.getElementById('people')) {
+      Webflow.push(function () {
+        document.getElementById('people').value = '2';
+      });
+    }
+
+    /*$("body").on("contextmenu",function(e){
+  return false;
+});*/
+  </script>
+
+  <!-- MOMENT JS-->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+
+  <!-- Date Range Picker -->
+  <script onload="loadedContent();" type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+  <!-- LAZY LOAD PLUGIN : to defer images loading which are below scroll threshold-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/4.1.4/lazysizes-umd.min.js"></script>
+
+  <!-- google maps -->
+  <script src="./assets/js/jquery.lazy-load-google-maps.min.js?v=1.0.0"></script>
+  <script src="./assets/js/google-maps.js?v=2.0.0"></script>
+
+  <!-- navbar effects -->
+  <script src="./assets/js/navbar-script.js?v=1.0.1"></script>
+
+  <!-- effects transforms -->
+  <script src="./assets/js/script.js?v=1.0.9"></script>
+  <script src="./assets/js/booking.js"></script>
+  <script src="//script.crazyegg.com/pages/scripts/0082/3126.js" async="async"></script>
+</body>
+
+</html>

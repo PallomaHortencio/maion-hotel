@@ -1,0 +1,384 @@
+<!DOCTYPE html <html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maion Hotel Boutique &#8211; Gastronomia</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" integrity="sha512-xA6Hp6oezhjd6LiLZynuukm80f8BoZ3OpcEYaqKoCV3HKQDrYjDE1Gu8ocxgxoXmwmSzM4iqPvCsOkQNiu41GA==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./assets/css/webflow.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <style>
+    .anti-flicker-hide {
+      opacity: 0 !important;
+    }
+  </style>
+  <!-- PHONE DETECTION -->
+  <meta name="format-detection" content="telephone=no" />
+
+  <!-- DATE PICKER -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+  <style>
+    @media screen and (min-width: 1366px) {
+      .height-250px-xl {
+        min-height: 250px;
+        height: 280px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <div class="maion-nav">
+      <div class="maion-burger">
+        <div class="maion-burger__lign top-lign"></div>
+        <div class="maion-burger__lign middle-lign"></div>
+        <div class="maion-burger__lign bottom-lign"></div>
+      </div>
+      <div class="is-absolute-mobile pos_relative z-index_2 maion-logo-container">
+        <a href="/" class="link-logo w-inline-block w--current">
+          <img id="maion-logo-yellow" src="./assets/images/logotipo_yellow.png" class="maion-logo-140 is-width-120px-mobile is-margin-auto" />
+        </a>
+      </div>
+      <a href="https://reservas.desbravador.com.br/hotel-app/maion-hotel-e-boutique" class="maion-btn menu-btn w-button" target="_blank">RESERVE AGORA</a>
+    </div>
+    <nav id="maion-menu" class="maion-menu overflow_scroll bg-black">
+      <div class="flex-horizontal_space-between align_center">
+        <img src="./assets/images/logotipo_white.png" alt="maion-logo" class="maion-logo-125 display_phablet-up" />
+        <div class="maion-menu-close display-phablet-up"></div>
+      </div>
+      <div class="maion-visible-menu">
+        <div>
+          <a href="/" aria-current="page" class="menu-nav_link is-mb-2em w-inline-block w--current">
+            <div class="text-link">Home</div>
+          </a>
+          <div class="menu-bloc">
+            <div class="menu-dropdown z-index-2">
+              <a href="./praia-espelho.html" class="menu-nav_link w-inline-block">
+                <div class="text-link">PRAIA DO ESPELHO</div>
+              </a>
+            </div>
+          </div>
+          <div class="menu-bloc">
+            <div class="menu-dropdown z-index-2">
+              <div class="dropdown-text uppercase color-white">
+                <a href="./acomodacoes.html" class="menu-nav_link w-inline-block">
+                  ACOMODAÇÕES
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="menu-bloc">
+            <div class="menu-dropdown z-index-2">
+              <a href="./gastronomia.html" class="menu-nav_link w-inline-block">
+                <div class="text-link">GASTRONOMIA</div>
+              </a>
+            </div>
+          </div>
+          <div class="m-top_2em">
+            <a href="./conceito.html" class="menu-nav_link is-mb-1em z-index-2 w-inline-block">
+              <div class="text-link">CONCEITO</div>
+            </a><a href="./contato.html" class="menu-nav_link is-mb-1em z-index-2 w-inline-block">
+              <div class="text-link">CONTATO</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+  </div>
+  <div class="main">
+    <div class="page-title-container m-bottom_2em">
+      <div class="page-title-container_img">
+        <img src="./assets/images/image_21.jpg" class="height_100 width_100pct" />
+      </div>
+      <div class="logo-title_container is-flex-vertical align-center pos-abs overlay-light">
+        <h1 class="page-title_main-title color-white main-title">
+          <span class="page_title-emphasis big inline">O Melhor</span><br />
+          da gastronomia<br />‍em um <br /><span class="page_title-emphasis big inline">verdadeiro</span>
+          <br /><span class="section_title-emphasis-bold big inline">paraíso</span>
+        </h1>
+      </div>
+    </div>
+    <div class="container-unit parallax-imgs-1">
+      <div class="col-60 col-50-tablet z-index-5">
+        <div class="section_info align-left transform-text-left max-width_350">
+          <div class="section_category_lign"></div>
+          <a class="section_category m-bottom_3em w-inline-block">
+            <div>COZINHA PARA TODOS.</div>
+          </a>
+          <h2 class="section_title title-overflow">
+            <span class="section_title-emphasis-bold inline">AUTENTICIDADE</span>
+          </h2>
+          <p class="section_paragraph">
+            O cardápio do <strong>Restaurante Maion</strong> é personalizado e exclusivo do Hotel.
+            Nosso Chefe selecionou o que há de melhor na matéria prima produzida na região, para
+            proporcionar uma experiência gastronômica durante a sua estadia.
+            Dos mais suculentos assados para o seletivo vegano.
+          </p>
+        </div>
+      </div>
+      <div class="col-40 col-50-tablet m-top-3em-mobile">
+        <div class="section_img-container height_100pct">
+          <div class="pos-abs flex-column justify-center tablet-up parallax-img-1 z-index-4">
+            <img src="./assets/images/MAION_EXPERIENCIA-206.jpg" sizes="(max-width: 991px) 100vw, (max-width: 2777px) 36vw, 1000px" class="section_img dimensions-auto transformx hide_tablet lazyload" />
+          </div>
+          <img src="./assets/images/MAION_EXPERIENCIA-213.jpg" class="section_img parallax-img-2 z-index-3 lazyload" />
+        </div>
+      </div>
+    </div>
+    <div class="container-unit wrap-reverse">
+      <div class="col-66 col-55-tablet m-top_3em-mobile">
+        <div class="section_img-container height_100 reveal-top">
+          <img src="./assets/images/image_41.jpg" alt="maion" data-sizes="(max-width: 479px) 88vw, (max-width: 767px) 93vw, (max-width: 991px) 52vw, 65vw" class="section_img lazyload" />
+        </div>
+      </div>
+      <div class="col-33 col-40_tablet flex-vertical_right">
+        <div class="section_info align-right transform-text-right max-width_350">
+          <a class="section_category m-bottom_3em w-inline-block">
+          </a>
+          <h2 class="section_title text-align_right_tablet-up">
+            DRINKS EXCLUSIVOS
+          </h2>
+          <p class="section_paragraph text-align_right-tablet">
+            Drinks exclusivos <br />
+            Refrescantes, apimentados, defumados entre outros.<br />
+            Desperte seus sentidos, gostos e sabores.<br />
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="container-unit ">
+      <div class="col-25-desktop col-33-tablet">
+        <div class="section_info height_100 flex-column align-left justify-center transform-text-right">
+          <div class="section_category_lign"></div>
+          <a class="section_category m-bottom_3em w-inline-block">
+            <div>CAFÉ DA MANHÃ</div>
+          </a>
+          <h2 class="text_resp section_title title-overflow">
+            O nosso “Bom Dia”<br /> começa assim:<br />
+            café da manhã farto<br /> e nutritivo.
+          </h2>
+          <p class="section_paragraph">
+            O seu dia merece começar em uma mesa repleta de cores, aromas e sabores, envolvido na
+            mais alegre das vibrações.<br />
+            O café da manhã é servido individualmente e personalizado conforme o seu paladar e
+            necessidades alimentares especiais.
+          </p>
+        </div>
+      </div>
+      <div class="col-73-desktop col-60-tablet m-top_3em-mobile">
+        <div class="section_img-container reveal-left">
+          <img src="./assets/images/image_35.jpg" alt="maion-sferik" width="1000" class="section_img lazyload" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="separator"></div>
+  <div class="maion-footer">
+    <div class="footer bg-black">
+      <div class="links-footer">
+        <div class="width-40pct-desktop" style="margin-bottom: 25px;">
+          <div class="bloc-footer footer__description width_100pct"></div>
+          <div class="flex-horizontal_space-between m-top-2em">
+            <div class="bloc-footer bloc-about color-white">
+              <h4 class="footer__section-title color-grey">MAION</h4>
+              <ul role="list" class="unordered-list color-white w-list-unstyled">
+                <li>
+                  <a href="/" class="bloc-footer-link color-grey w-inline-block">
+                    <div class="footer__text">Home</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="./praia-espelho.html" class="bloc-footer-link color-grey w-inline-block">
+                    <div class="footer__text">Praia de Espelho</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="./acomodacoes.html" class="bloc-footer-link color-grey w-inline-block">
+                    <div class="footer__text mt-20">Acomodações</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="./gastronomia.html" class="bloc-footer-link color-grey w-inline-block">
+                    <div class="footer__text mt-20">Gastronomia</div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="bloc-footer double-bloc">
+              <div class="flex-horizontal_space-between flex-vertical_mobile">
+                <div class="width-50pct width-100pct-mobile-only">
+                  <div>
+                    <ul role="list" class="footer__brand-list w-list-unstyled">
+                      <li class="list-item">
+                        <a href="./conceito.html" class="bloc-footer-link color-grey w-inline-block" disabled>
+                          <div class="footer__text">Conceito</div>
+                        </a>
+                      </li>
+                      <li class="list-item">
+                        <a href="./contato.html" class="bloc-footer-link color-grey w-inline-block" disabled>
+                          <div class="footer__text">Contato</div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="width-40pct-desktop m-top-3em-tablet height_100 p-right-20px-desktop">
+          <div id="map" data-lat="-16.724532" data-lng="-39.122580" data-title="Maion Hotel Boutique" class="google-map" style="top: -50px;"></div>
+        </div>
+      </div>
+      <div class="maion-footer__copyight">
+        <div class="is-w-40pct is-w-100-mobile is-flex-horizontal">
+          <div class="maion-logo-100">
+            <img src="./assets/images/logotipo_white.png" sizes="100px" alt="" />
+          </div>
+        </div>
+        <div class="is-w-100-mobile is-flex-horizontal is-centered mt-20-mobile w-clearfix">
+          <div class="copyright color-grey">
+            © <span id="copyright-year">2020</span> MAION
+            <!-- <a href="#" class="copyright-link color-grey"
+                >Termos e Condições</a
+              >
+              |
+              <a href="#" class="copyright-link color-grey"
+                >Política de Privacidade</a
+              > -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('#celular').mask('+00 (00) 00000-0000');
+    });
+  </script>
+  <script type="text/javascript">
+    'use strict';
+
+    function loadedContent() {
+      if (typeof daterangepicker !== 'undefined') {
+        var inputDatePickerCheckIn = $('input[name="dataIn"]'),
+          inputDatePickerCheckOut = $('input[name="dataOut"]');
+
+        if (typeof inputDatePickerCheckIn !== 'undefined') {
+          inputDatePickerCheckIn.daterangepicker({
+            autoApply: true,
+            singleDatePicker: true,
+            startDate: moment().add(1, 'days'),
+            locale: {
+              format: 'DD/MM/YYYY',
+              separator: '/',
+              applyLabel: 'Aplicar',
+              cancelLabel: 'Cancelar',
+              daysOfWeek: [
+                'Dom',
+                'Seg',
+                'Ter',
+                'Qua',
+                'Qui',
+                'Sex',
+                'Sab'
+              ],
+              monthNames: [
+                'Jan',
+                'Fev',
+                'Mar',
+                'Abr',
+                'Mai',
+                'Jun',
+                'Jul',
+                'Ago',
+                'Set',
+                'Out',
+                'Nov',
+                'Dez'
+              ],
+              firstDay: 1
+            }
+          });
+        }
+
+        if (typeof inputDatePickerCheckOut !== 'undefined') {
+          inputDatePickerCheckOut.daterangepicker({
+            autoApply: true,
+            singleDatePicker: true,
+            startDate: moment().add(2, 'days'),
+            locale: {
+              format: 'DD/MM/YYYY',
+              separator: '/',
+              applyLabel: 'Aplicar',
+              cancelLabel: 'Cancelar',
+              daysOfWeek: [
+                'Dom',
+                'Seg',
+                'Ter',
+                'Qua',
+                'Qui',
+                'Sex',
+                'Sab'
+              ],
+              monthNames: [
+                'Jan',
+                'Fev',
+                'Mar',
+                'Abr',
+                'Mai',
+                'Jun',
+                'Jul',
+                'Ago',
+                'Set',
+                'Out',
+                'Nov',
+                'Dez'
+              ],
+              firstDay: 1
+            }
+          });
+        }
+      }
+    }
+
+    // default value input Number booking engine
+    if (document.getElementById('people')) {
+      Webflow.push(function () {
+        document.getElementById('people').value = '2';
+      });
+    }
+
+    /*$("body").on("contextmenu",function(e){
+  return false;
+});*/
+  </script>
+
+  <!-- MOMENT JS-->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+
+  <!-- Date Range Picker -->
+  <script onload="loadedContent();" type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+  <!-- LAZY LOAD PLUGIN : to defer images loading which are below scroll threshold-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/4.1.4/lazysizes-umd.min.js"></script>
+
+  <!-- google maps -->
+  <script src="./assets/js/jquery.lazy-load-google-maps.min.js?v=1.0.0"></script>
+  <script src="./assets/js/google-maps.js?v=2.0.0"></script>
+
+  <!-- navbar effects -->
+  <script src="./assets/js/navbar-script.js?v=1.0.1"></script>
+
+  <!-- effects transforms -->
+  <script src="./assets/js/script.js?v=1.0.9"></script>
+  <script src="./assets/js/booking.js"></script>
+  <script src="//script.crazyegg.com/pages/scripts/0082/3126.js" async="async"></script>
+</body>
+
+</html>

@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maion Hotel Boutique</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" integrity="sha512-xA6Hp6oezhjd6LiLZynuukm80f8BoZ3OpcEYaqKoCV3HKQDrYjDE1Gu8ocxgxoXmwmSzM4iqPvCsOkQNiu41GA==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./assets/css/webflow.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <!-- DATE PICKER -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+  <style>
+    .o-pos_bottom {
+      object-position: bottom;
+    }
+
+    @media screen and (max-width: 768px) {
+      .w-slider-arrow-left {
+        width: 30px;
+      }
+    }
+
+    /* SPLASH SCREEN ONLY */
+    body {
+      overflow: hidden;
+    }
+
+    .menu-btn,
+    .maion-burger {
+      -webkit-transform: translateY(-100px);
+      -ms-transform: translateY(-100px);
+      transform: translateY(-100px);
+    }
+
+    .splash {
+      opacity: 1;
+      z-index: 14;
+    }
+
+    /* END SPLASH SCREEN ONLY */
+    /* CSS pour le blog */
+    .blog .section_info {
+      height: auto;
+    }
+
+    .flex-horizontal_space-between.fullscreen.height-auto {
+      min-height: auto;
+      height: auto;
+    }
+
+    .p-top_4em {
+      padding-top: 4em;
+    }
+
+    .main-post,
+    .second-post,
+    .third-post {
+      opacity: 0;
+      -webkit-transition: opacity 0.5s;
+      -o-transition: opacity 0.5s;
+      transition: opacity 0.5s;
+      height: 100%;
+    }
+
+    .col-32 {
+      width: 32%;
+    }
+
+    .blog-section {
+      padding: 0 3em;
+    }
+
+    .blog-section .section_img-container {
+      height: 45vh;
+    }
+
+    .blog-section .section_title {
+      font-size: 2em;
+      margin-top: 1em;
+    }
+
+    .blog-section .section_paragraph {
+      margin-bottom: 1em;
+    }
+
+    @media screen and (min-width: 1500px) {
+      .banner-anikena {
+        width: 1300px;
+      }
+    }
+
+    @media screen and (max-width: 991px) {
+      .blog-section {
+        padding: 0 2em;
+      }
+
+      .main-post {
+        width: 100%;
+        margin-bottom: 3em;
+        justify-content: space-between;
+        display: flex;
+        align-items: stretch;
+      }
+
+      .main-post .section_img-container {
+        margin-bottom: 0;
+        width: 49%;
+        height: 100%;
+      }
+
+      .second-post .section_img-container,
+      .third-post .section_img-container {
+        height: 50%;
+      }
+
+      .second-post,
+      .third-post,
+      .main-post .section_info {
+        width: 49%;
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      .blog .align-right {
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+      }
+
+      #blog-section .section_info {
+        margin-top: 2em;
+      }
+
+      #blog-section .section_paragraph {
+        margin-bottom: 0.5em;
+      }
+
+      .main-post {
+        width: 100%;
+        margin-bottom: 3em;
+        display: block;
+      }
+
+      .main-post .section_img-container {
+        height: 50%;
+        margin-bottom: 0;
+        width: 100%;
+      }
+
+      .second-post,
+      .third-post,
+      .main-post .section_info {
+        width: 100%;
+      }
+
+      .flex-wrap-reverse-mobile {
+        flex-wrap: wrap-reverse;
+      }
+
+      .m-top-3em_mobile {
+        margin-top: 3em;
+      }
+
+      .flex-horizontal_space-between.flex-wrap-reverse {
+        flex-wrap: wrap;
+      }
+
+      .praia {
+        width: 127% !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <div class="maion-nav">
+      <div class="maion-burger">
+        <div class="maion-burger__lign top-lign"></div>
+        <div class="maion-burger__lign middle-lign"></div>
+        <div class="maion-burger__lign bottom-lign"></div>
+      </div>
+      <div class="is-absolute-mobile pos_relative z-index_2 maion-logo-container">
+        <a href="/" class="link-logo w-inline-block w--current">
+          <img id="maion-logo-yellow" src="./assets/images/logotipo_yellow.png" class="maion-logo-140 is-width-120px-mobile is-margin-auto" />
+        </a>
+      </div>
+      <a href="https://reservas.desbravador.com.br/hotel-app/maion-hotel-e-boutique" class="maion-btn menu-btn w-button" target="_blank">RESERVE AGORA</a>
+    </div>
+    <nav id="maion-menu" class="maion-menu overflow_scroll bg-black">
+      <div class="flex-horizontal_space-between align_center">
+        <img src="./assets/images/logotipo_white.png" alt="maion-logo" class="maion-logo-125 display_phablet-up" />
+        <div class="maion-menu-close display-phablet-up"></div>
+      </div>
+      <div class="maion-visible-menu">
+        <div>
+          <a href="/" aria-current="page" class="menu-nav_link is-mb-2em w-inline-block w--current">
+            <div class="text-link">Home</div>
+          </a>
+          <div class="menu-bloc">
+            <div class="menu-dropdown z-index-2">
+              <a href="./praia-espelho.html" class="menu-nav_link w-inline-block">
+                <div class="text-link">PRAIA DO ESPELHO</div>
+              </a>
+            </div>
+          </div>
+          <div class="menu-bloc">
+            <div class="menu-dropdown z-index-2">
+              <div class="dropdown-text uppercase color-white">
+                <a href="./acomodacoes.html" class="menu-nav_link w-inline-block">
+                  ACOMODAÇÕES
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="menu-bloc">
+            <div class="menu-dropdown z-index-2">
+              <a href="./gastronomia.html" class="menu-nav_link w-inline-block">
+                <div class="text-link">GASTRONOMIA</div>
+              </a>
+            </div>
+          </div>
+          <div class="m-top_2em">
+            <a href="./conceito.html" class="menu-nav_link is-mb-1em z-index-2 w-inline-block">
+              <div class="text-link">CONCEITO</div>
+            </a><a href="./contato.html" class="menu-nav_link is-mb-1em z-index-2 w-inline-block">
+              <div class="text-link">CONTATO</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+  </div>
+  <div class="banner-message"></div>
+  <div class="splash">
+    <div class="progressbar">
+      <div class="loading-lign"></div>
+    </div>
+  </div>
+  <div class="main">
+    <div class="fullscreen m-bottom_2em pos-rel">
+      <div id="scrollBtn" class="scroll-down" style="z-index: 1000;">
+        <div class="flex-vertical_center align-center color-white fs-20px w-embed">
+          <i class="fas fa-angle-down"></i>
+        </div>
+      </div>
+      <div class="w-embed">
+        <div data-video-urls="./assets/videos/web_video.mp4" data-autoplay="true" data-loop="true" data-wf-ignore="true" class="bg-video fullscreen w-background-video w-background-video-atom">
+          <video preload="metadata" autoplay="" loop="" muted="" playsinline="" data-wf-ignore="true" preload="metadata">
+            <source src="./assets/videos/web_video.mp4" data-wf-ignore="true" />
+          </video>
+        </div>
+      </div>
+    </div>
+    <!-- Conteudo -->
+    <div id="content" class="container-unit">
+      <div class="col-25-desktop col-33-tablet">
+        <div class="section_info height_100 flex-column align-left justify-center transform-text-right">
+          <div class="section_category_lign"></div>
+          <a href="#" class="section_category m-bottom_3em w-inline-block">
+            <div>PRAIA DO ESPELHO</div>
+          </a>
+          <h2 class="section_title text-align_left_tablet-up">
+            <span class="section_title-emphasis-normal inline">
+              Entre as 10<br />
+              <span class="section_title-emphasis-bold inline">mais belas</span> <br>
+              <span class="section_title-emphasis-normal inline">Praias do Brasil</span>
+            </span>
+          </h2><br />
+          <p class="section_paragraph text-align_left-tablet">
+            Há mais de duas décadas, o conjunto de atrativos escala a Praia do espelho entre as 10
+            mais belas praias do Brasil.
+          </p>
+        </div>
+      </div>
+      <div class="col-73-desktop col-65-tablet m-top_3em-mobile">
+        <div class="section_img-container reveal-left">
+          <img src="./assets/images/image_32.jpg" alt="maion-sferik" width="1000" class="section_img lazyload" />
+        </div>
+      </div>
+    </div>
+    <div class="container-unit wrap-reverse">
+      <div class="col-66 col-55-tablet m-top_3em-mobile">
+        <div class="section_img-container height_100 reveal-top">
+          <img src="./assets/images/areia1.jpg" alt="maion" data-sizes="(max-width: 479px) 88vw, (max-width: 767px) 93vw, (max-width: 991px) 52vw, 65vw" class="section_img lazyload" />
+        </div>
+      </div>
+      <div class="col-33 col-40_tablet flex-vertical_left">
+        <div class="section_info align-left transform-text-left max-width_350">
+          <div class="section_category_lign"></div>
+          <a class="section_category m-bottom_3em w-inline-block">
+            <div>ACOMODAÇÕES</div>
+          </a>
+          <h2 class="section_title">
+            <span class="section_title-emphasis-bold inline">Areia</span>
+            <span class="section_title-emphasis-normal inline">
+              <br />Coral</span>
+            <span class="section_title-emphasis-normal inline"><br /></span>Falésia<span class="section_title-emphasis-normal inline">
+              e Falésia Super Luxo</span>
+          </h2>
+          <p class="section_paragraph">
+            Todas as acomodações são equipadas com cama king size, ar condicionado, wi-fi, Tv, frigobar,
+            secador de cabelo, amenidades entre outros itens essenciais para o seu conforto.
+          </p>
+          <a href="#" class="section_btn w-button">EXPLORE THE CITY</a>
+        </div>
+      </div>
+    </div>
+    <div class="container-unit parallax-imgs-1">
+      <div class="col-60 col-50-tablet z-index-5">
+        <div class="section_info align-left transform-text-left max-width_350">
+          <div class="section_category_lign"></div>
+          <a class="section_category m-bottom_3em w-inline-block">
+            <div>AUTENTICIDADE</div>
+          </a>
+          <h2 class="section_title text-align_left_tablet-up">
+            <span class="section_title-emphasis-normal inline">
+              O cardápio do Restaurante Maion é
+              <span class="section_title-emphasis-bold inline">personalizado</span>
+            </span>
+            <br />e exclusivo do Hotel.
+          </h2>
+          <p class="section_paragraph text-align_left-tablet">
+            Nosso Chefe selecionou o que há de melhor na matéria prima produzida na região, para
+            proporcionar uma experiência gastronômica durante a sua estadia.
+          </p>
+        </div>
+      </div>
+      <div class="col-40 col-50-tablet m-top-3em-mobile">
+        <div class="section_img-container height_100pct">
+          <div class="pos-abs flex-column justify-center tablet-up parallax-img-1 z-index-4">
+            <img src="./assets/images/image_29.jpg" alt="" sizes="(max-width: 991px) 100vw, (max-width: 2777px) 36vw, 1000px" class="section_img dimensions-auto transformx hide_tablet lazyload" />
+          </div>
+          <img src="./assets/images/image_31.jpg" alt="" width="1000" class="section_img parallax-img-2 z-index-3 lazyload" />
+        </div>
+      </div>
+    </div>
+    <div class="container-unit justify-center p-bottom_large min-height-auto bg-grey">
+      <!-- w-layout-grid  -->
+      <div class="p-around-4em-desktop p-top-4em-tablet grid-2-elements">
+        <div id="w-node-840deb21f2e5-eb21f2c5">
+          <div class="flex-column align-center m-bottom-medium">
+            <h4 class="section_title small text-align_center color-grey">
+              siga nossas<br />
+              <span class="section_title-emphasis-normal inline">REDES SOCIAIS</span>
+            </h4>
+            <div>
+              <div class="w-embed">
+                <div class="follow-us-links">
+                  <a href="https://www.facebook.com/maionhoteleboutique/" target="_blank"><i class="fab fa-facebook"></i></a>
+                  <a href="https://www.instagram.com/maionhoteleboutique/" target="_blank"><i class="fab fa-instagram"></i></a>
+                  <a id="whatsapp_link" href="https://api.whatsapp.com/send?phone=+5573998202019&amp;text=%20Mais Informações" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="newsletter_tel">
+            <div class="m-bottom-small">
+              <div class="fw-bold color-grey">BRASIL</div>
+              <div class="newsletter_num">
+                +55 73 99820 2019<br />
+                +55 73 99945 0202
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="maion-footer">
+    <div class="footer bg-black">
+      <div class="links-footer">
+        <div class="width-40pct-desktop">
+          <div class="bloc-footer footer__description width_100pct"></div>
+          <div class="flex-horizontal_space-between m-top-2em" style="margin-bottom: 25px;">
+            <div class="bloc-footer bloc-about color-white">
+              <h4 class="footer__section-title color-white">MAION</h4>
+              <ul role="list" class="unordered-list color-white w-list-unstyled">
+                <li>
+                  <a href="/" class="bloc-footer-link color-grey w-inline-block">
+                    <div class="footer__text">Home</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="./praia-espelho.html" class="bloc-footer-link color-grey w-inline-block">
+                    <div class="footer__text">Praia de Espelho</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="./acomodacoes.html" class="bloc-footer-link color-grey w-inline-block">
+                    <div class="footer__text mt-20">Acomodações</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="./gastronomia.html" class="bloc-footer-link color-grey w-inline-block">
+                    <div class="footer__text mt-20">Gastronomia</div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="bloc-footer double-bloc">
+              <div class="flex-horizontal_space-between flex-vertical_mobile">
+                <div class="width-50pct width-100pct-mobile-only">
+                  <div>
+                    <ul role="list" class="footer__brand-list w-list-unstyled">
+                      <li class="list-item">
+                        <a href="./conceito.html" class="bloc-footer-link color-grey w-inline-block">
+                          <div class="footer__text">Conceito</div>
+                        </a>
+                      </li>
+                      <li class="list-item">
+                        <a href="./contato.html" class="bloc-footer-link color-grey w-inline-block">
+                          <div class="footer__text">Contato</div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="width-40pct-desktop m-top-3em-tablet height_100 p-right-20px-desktop">
+          <div id="map" data-lat="-16.724532" data-lng="-39.122580" data-title="Maion Hotel Boutique" class="google-map" style="top: -50px;"></div>
+        </div>
+      </div>
+      <div class="maion-footer__copyight">
+        <div class="is-w-40pct is-w-100-mobile is-flex-horizontal">
+          <div class="maion-logo-100">
+            <img src="./assets/images/logotipo_white.png" sizes="100px" alt="" />
+          </div>
+        </div>
+        <div class="is-w-100-mobile is-flex-horizontal is-centered mt-20-mobile w-clearfix">
+          <div class="copyright color-white">
+            © <span id="copyright-year">2020</span> MAION
+            <!-- <a href="#" class="copyright-link color-grey"
+                >Termos e Condições</a
+              >
+              |
+              <a href="#" class="copyright-link color-grey"
+                >Política de Privacidade</a
+              > -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+  <script src="./assets/js/navbar-script.js"></script>
+  <script src="./assets/js/script.js"></script>
+  <script>
+    $(document).on('click', '#scrollBtn', function () {
+      $('html, body').animate({
+        scrollTop: $('#content').offset().top
+      }, 2000);
+    });
+
+    $(document).ready(function () {
+      $('#celular').mask('+00 (00) 00000-0000');
+    });
+  </script>
+  <script>
+    // splash screen
+    ready(function () {
+      var splash = document.querySelector('.splash'),
+        progressBar = document.querySelector('.progressbar'),
+        loading = document.querySelector('.loading-lign'),
+        percent = 0,
+        burger = document.querySelector('.maion-burger'),
+        book = document.querySelector('.menu-btn'),
+        body = document.querySelector('body'),
+        scrollDown = document.querySelector('.scroll-down'),
+        progress;
+
+      burger.style.transform = 'translateY(-100px)';
+      book.style.transform = 'translateY(-100px)';
+      body.style.overflow = 'hidden';
+
+      function removeSplash() {
+        body.style.overflow = 'visible';
+        splash.style.opacity = 0;
+        splash.style.zIndex = 0;
+        burger.style.transform = 'translateY(0px)';
+        book.style.transform = 'translateY(0px)';
+
+        //show scroll down
+        setTimeout(function () {
+          scrollDown.style.transform = 'translateY(0px)';
+          scrollDown.style.opacity = 1;
+        }, 600);
+
+        /* Modal popups*/
+
+        //var popup_rand = Math.floor((Math.random() * 2));
+        //var popups = ['special_offer_popup', 'new_year_dinner_popup'];
+        setTimeout(function () {
+          //Show modal
+          //document.getElementById('popup_slider').style.display = 'flex';
+        }, 3000);
+      }
+
+      function loadBar() {
+        if (percent == 100) {
+          clearInterval(progress);
+          //prevent splash from re-appearing in the same session
+          sessionStorage.setItem('splashShown', true);
+          removeSplash();
+          return;
+        }
+        percent += 2;
+        loading.style.width = percent.toString() + '%';
+      }
+
+      if (!sessionStorage.getItem('splashShown')) {
+        // start animation
+        setTimeout(function () {
+          progressBar.style.opacity = 1;
+          progress = setInterval(loadBar, 70);
+        }, 200);
+      } else {
+        // show page directly
+        removeSplash();
+      }
+    });
+
+    // fetch 3 posts from MAION Blog
+    function receiveLatestPosts(data) {
+      if (
+        data == undefined ||
+        data == null ||
+        (data != undefined && data.length < 3)
+      ) {
+        var blog = document.querySelector('.blog-section');
+        blog.style.display = 'none';
+        return;
+      }
+
+      var mainPost = {
+        post: data[0],
+        container: 'main-post'
+      };
+      var secondPost = {
+        post: data[1],
+        container: 'second-post'
+      };
+      var thirdPost = {
+        post: data[2],
+        container: 'third-post'
+      };
+      var arrayPost = [mainPost, secondPost, thirdPost];
+      var blogSection = document.getElementById('blog-section');
+      arrayPost.forEach(function (element) {
+        var imgUrl =
+          './assets/images/placeholder.jpg';
+        if (element.post.featured_media != 0) {
+          var imgUrl =
+            element.post._embedded['wp:featuredmedia'][0]['source_url'];
+        }
+        var selectorClass = '.' + element.container + ' .section_paragraph';
+        var extractContainer = blogSection.querySelector(selectorClass);
+        extractContainer.innerHTML = element.post.excerpt.rendered;
+        selectorClass = '.' + element.container + ' .section_btn';
+        var anchor = blogSection.querySelector(selectorClass);
+        anchor.href = element.post.link;
+        selectorClass = '.' + element.container + ' .section_title';
+        var titleContainer = blogSection.querySelector(selectorClass);
+        titleContainer.innerHTML = element.post.title.rendered;
+        selectorClass = '.' + element.container + ' .section_img';
+        var imgContainer = blogSection.querySelector(selectorClass);
+        imgContainer.src = imgUrl;
+      });
+    }
+    //Popup functions
+    $('#popup_close').click(function () {
+      $('#popup_slider').css('display', 'none');
+    });
+    $('#special_offer_popup').click(function () {
+      $('#special_offer_popup').css('display', 'none');
+    });
+    $('#new_year_dinner_popup').click(function () {
+      $('#new_year_dinner_popup').css('display', 'none');
+    });
+
+    var countDownDate = new Date('Jan 01, 2020 00:00:00').getTime();
+
+    var x = setInterval(function () {
+      var now = new Date().getTime();
+      var distance = countDownDate - now;
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      var moreHours = 0;
+      if (days > 0) {
+        var moreHours = days * 24;
+      }
+      var totalhours = moreHours + hours;
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      if (totalhours < 10) totalhours = '0' + totalhours;
+      if (hours < 10) hours = '0' + hours;
+      if (minutes < 10) minutes = '0' + minutes;
+      if (seconds < 10) seconds = '0' + seconds;
+
+      //document.getElementById("date_counter").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+      if (distance < 0) {
+        clearInterval(x);
+        //document.getElementById("date_counter").innerHTML = "HAPPY NEW YEAR";
+      }
+
+      //Banner message
+      var currentDay = new Date();
+      var today =
+        currentDay.getFullYear() +
+        '-' +
+        (currentDay.getMonth() + 1) +
+        '-' +
+        currentDay.getDate();
+      if (today == '2020-2-6' || today == '2020-3-14') {
+        $('.banner-message').delay(2000).slideDown('slow');
+      }
+    }, 1000);
+  </script>
+  <script type="text/javascript">
+    'use strict';
+
+    function loadedContent() {
+      if (typeof daterangepicker !== 'undefined') {
+        var inputDatePickerCheckIn = $('input[name="dataIn"]'),
+          inputDatePickerCheckOut = $('input[name="dataOut"]');
+
+        if (typeof inputDatePickerCheckIn !== 'undefined') {
+          inputDatePickerCheckIn.daterangepicker({
+            autoApply: true,
+            singleDatePicker: true,
+            startDate: moment().add(1, 'days'),
+            locale: {
+              format: 'DD/MM/YYYY',
+              separator: '/',
+              applyLabel: 'Aplicar',
+              cancelLabel: 'Cancelar',
+              daysOfWeek: [
+                'Dom',
+                'Seg',
+                'Ter',
+                'Qua',
+                'Qui',
+                'Sex',
+                'Sab'
+              ],
+              monthNames: [
+                'Jan',
+                'Fev',
+                'Mar',
+                'Abr',
+                'Mai',
+                'Jun',
+                'Jul',
+                'Ago',
+                'Set',
+                'Out',
+                'Nov',
+                'Dez'
+              ],
+              firstDay: 1
+            }
+          });
+        }
+
+        if (typeof inputDatePickerCheckOut !== 'undefined') {
+          inputDatePickerCheckOut.daterangepicker({
+            autoApply: true,
+            singleDatePicker: true,
+            startDate: moment().add(2, 'days'),
+            locale: {
+              format: 'DD/MM/YYYY',
+              separator: '/',
+              applyLabel: 'Aplicar',
+              cancelLabel: 'Cancelar',
+              daysOfWeek: [
+                'Dom',
+                'Seg',
+                'Ter',
+                'Qua',
+                'Qui',
+                'Sex',
+                'Sab'
+              ],
+              monthNames: [
+                'Jan',
+                'Fev',
+                'Mar',
+                'Abr',
+                'Mai',
+                'Jun',
+                'Jul',
+                'Ago',
+                'Set',
+                'Out',
+                'Nov',
+                'Dez'
+              ],
+              firstDay: 1
+            }
+          });
+        }
+      }
+    }
+
+      // default value input Number booking engine
+    /*if (document.getElementById('people')) {
+      Webflow.push(function () {
+        document.getElementById('people').value = '2';
+      });
+    }
+
+    $("body").on("contextmenu",function(e){
+      return false;
+    });*/
+  </script>
+  <!-- MOMENT JS-->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <!-- Date Range Picker -->
+  <script onload="loadedContent();" type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+  <!-- LAZY LOAD PLUGIN : to defer images loading which are below scroll threshold-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/4.1.4/lazysizes-umd.min.js"></script>
+  <!-- google maps -->
+  <script src="./assets/js/jquery.lazy-load-google-maps.min.js?v=1.0.0"></script>
+  <script src="./assets/js/google-maps.js"></script>
+  <script src="./assets/js/booking.js"></script>
+</body>
+
+</html>
